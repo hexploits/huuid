@@ -1,5 +1,5 @@
 # Huuid
-Typed uuids for large scale projects
+Allow you to add types to UUIDs.
 
 # Example Usage:
 ```java
