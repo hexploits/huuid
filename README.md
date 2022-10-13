@@ -1,7 +1,7 @@
 # Huuid
-Typed uuids for large scale projects
+Allow you to add types to UUIDs.
 
-# Example Usage:
+## Example Usage:
 ```java
 @JsonSerialize(using = TypedHuuidSerializer.class)
 @JsonDeserialize(using = TypedHuuidDeserializer.class)
