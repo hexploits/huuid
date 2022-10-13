@@ -3,7 +3,6 @@ Typed uuids for large scale projects.
 
 # Example Usage:
 ```java
-@Schema(format = "uuid", type = "string")
 @JsonSerialize(using = TypedHuuidSerializer.class)
 @JsonDeserialize(using = TypedHuuidDeserializer.class)
 public class CustomerId extends Huuid {
