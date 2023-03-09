@@ -16,6 +16,24 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4'
 }
 
+publishing {
+    repositories {
+        maven {
+            name = "huuid"
+            url = uri("https://maven.pkg.github.com/hexploits/huuid")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("GIT_USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("GIT_TOKEN")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+
 test {
     useJUnitPlatform()
 }
